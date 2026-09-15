@@ -8,8 +8,14 @@ class Hero:
         self.attack_power = 16
 
     def attack(self):
-        ### Returns a random value 1 through this hero's attack power. ###
+        """ Returns a random value 1 through this hero's attack power. """
         return(random.randint(1, self.attack_power))
 
     def take_damage(self, damage):
-        ### Subtract damage, doesn't let fall below 0. ###
+        """ Subtract damage, doesn't let fall below 0. """
+        self.health = max(0, self.health - damage)
+        print(f"{self.name} takes {damage} damage. Health: {self.health}.")
+
+    def is_alive(self):
+        """Returns True when the Hero has health remaining."""
+        return self.health > 0

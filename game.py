@@ -7,6 +7,7 @@ ARENA_NAME = "The Forest's Eye"
 
 def main():
     """Open the arena and introduce its first opponent."""
+    print("     ")
     print(f"Welcome to {ARENA_NAME}!")
     print("༼ ᓄºل͟º ༽ᓄ   ᕦ(ò_óˇ)ᕤ")
     print("The gates are opening...")
@@ -16,11 +17,13 @@ def main():
     goblin2 = Goblin("Scribble")
 
     hero = Hero("Lauriel")
-
+    print(f"{hero.name} enters the arena with {hero.health} health.")
     print(f"{goblin.name} enters the arena with {goblin.health} health.")
     print(f"{goblin2.name} enters the arena with {goblin2.health} health.")
 
-    print(f"{hero.name} has answered the call.")
+    goblinHealth = goblin.health - hero.attack
+
+
 
 
 if __name__ == "__main__":
