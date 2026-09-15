@@ -21,3 +21,7 @@ class Hero:
     def is_alive(self):
         """Returns True when the Hero has health remaining."""
         return self.health > 0
+
+    def healingPotion(self):
+        if self.health < 15:
+            if random.randint =
