@@ -24,4 +24,5 @@ class Hero:
 
     def healingPotion(self):
         if self.health < 15:
-            if random.randint =
+            if random.randint(1,2) == 2:
+                self.health += 
