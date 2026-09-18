@@ -4,8 +4,8 @@ class Hero:
 
     def __init__(self, name):
         self.name = name
-        self.health = 120
-        self.attack_power = 16
+        self.health = 100
+        self.attack_power = 14
 
     def attack(self):
         """ Returns a random value 1 through this hero's attack power. """
@@ -25,4 +25,7 @@ class Hero:
     def healingPotion(self):
         if self.health < 15:
             if random.randint(1,2) == 2:
-                self.health += 
+                potionStrength = random.randint(1, 50)
+                self.health += potionStrength
+                print(f"{self.name} uses a healing potion, gaining {potionStrength}.")
+                print(f"{self.name}'s Health = {self.health}")
