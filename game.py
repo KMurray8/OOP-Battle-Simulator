@@ -1,5 +1,6 @@
 from goblin import Goblin
 from hero import Hero
+from boss import Boss
 
 
 ARENA_NAME = "The Forest's Eye"
@@ -28,12 +29,13 @@ def main():
     goblin = Goblin("Jeffy")
     goblin2 = Goblin("Scribble")
     hero = Hero("Lauriel")
+    boss = Boss("Thorned Flower")
 
     print(f"{hero.name} enters the arena with {hero.health} health.")
     print(f"{goblin.name} enters the arena with {goblin.health} health.")
     print(f"{goblin2.name} enters the arena with {goblin2.health} health.")
     print("      ")
-    battle(hero, goblin)
+    battle(hero, boss)
 
 
 

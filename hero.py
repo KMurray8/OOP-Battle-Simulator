@@ -5,7 +5,7 @@ class Hero:
     def __init__(self, name):
         self.name = name
         self.health = 100
-        self.attack_power = 14
+        self.attack_power = 16
 
     def attack(self):
         """ Returns a random value 1 through this hero's attack power. """
